@@ -15,6 +15,20 @@ namespace Game
         //最终节点
         private Node EndNode;
 
+        //是否只要转折点
+        private bool onlyTurnner = false;
+
+        public AStar(bool onlyTurnner)
+        {
+            this.onlyTurnner = onlyTurnner;
+        }
+
+        public AStar()
+        {
+            this.onlyTurnner = true;
+        }
+
+
         /// <summary>
         /// 寻路
         /// </summary>
@@ -64,10 +78,11 @@ namespace Game
                 bool isTurner = true;
                 do
                 {
-                    if (isTurner)
+                    if (!onlyTurnner || isTurner)
                     {
                         poses.Add(currentNode.pos);
                     }
+
                     isTurner = !currentNode.IsSameD;
                     currentNode = currentNode.father;
                 }
