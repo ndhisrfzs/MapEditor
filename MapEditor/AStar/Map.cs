@@ -17,7 +17,7 @@ namespace Game
         /// <returns></returns>
         public List<Pos> FindPath(Pos StartPos, Pos EndPos)
         {
-            return AStar.FindPath(this, StartPos, EndPos);
+            return AStar<bool>.FindPath(this, StartPos, EndPos);
         }
 
         /// <summary>

@@ -2,10 +2,10 @@
 
 namespace Game
 {
-    public class AStar
+    public class AStar<T>
     {
         //地图数据
-        protected Map map = null;
+        protected Map<T> map = null;
 
         private readonly Dictionary<Pos, Node> OpenList = new Dictionary<Pos, Node>();
         private readonly Dictionary<Pos, Node> CloseList = new Dictionary<Pos, Node>();
@@ -22,9 +22,9 @@ namespace Game
         /// <param name="StartPos"></param>
         /// <param name="EndPos"></param>
         /// <returns></returns>
-        public static List<Pos> FindPath(Map map, Pos StartPos, Pos EndPos)
+        public static List<Pos> FindPath(Map<T> map, Pos StartPos, Pos EndPos)
         {
-            AStar aStar = new AStar();
+            AStar<T> aStar = new AStar<T>();
             return aStar.findPath(map, StartPos, EndPos);
         }
 
@@ -34,7 +34,7 @@ namespace Game
         /// <param name="StartPos">起点</param>
         /// <param name="EndPos">终点</param>
         /// <returns></returns>
-        protected List<Pos> findPath(Map map, Pos StartPos, Pos EndPos)
+        protected List<Pos> findPath(Map<T> map, Pos StartPos, Pos EndPos)
         {
             this.map = map;
 

@@ -31,12 +31,12 @@
             <CheckBox Name="IsShowGrid" Margin="10" IsChecked="True" Click="IsShowGrid_Click">显示网格</CheckBox>
             <StackPanel Orientation="Horizontal" Margin="10">
                 <TextBlock>单元格宽：</TextBlock>
-                <Slider x:Name="gridWidthSlider" Minimum="5" Maximum="50" Value="20" Width="100" ValueChanged="Slider_ValueChanged"/>
+                <Slider x:Name="gridWidthSlider" Minimum="1" Maximum="50" Value="20" Width="100" ValueChanged="Slider_ValueChanged"/>
                 <TextBlock Name="GridWidth">20</TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10">
                 <TextBlock>单元格高：</TextBlock>
-                <Slider x:Name="gridHeightSlider" Minimum="5" Maximum="50" Value="20" Width="100" ValueChanged="Slider_ValueChanged_1"/>
+                <Slider x:Name="gridHeightSlider" Minimum="1" Maximum="50" Value="20" Width="100" ValueChanged="Slider_ValueChanged_1"/>
                 <TextBlock Name="GridHeight">20</TextBlock>
             </StackPanel>
             <TextBlock Margin="10" Name="coordinate" HorizontalAlignment="Left" VerticalAlignment="Bottom">当前坐标:</TextBlock>
